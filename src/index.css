@@ -3,3 +3,76 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+#style-selector-control{
+  position: absolute;
+  left: 0;
+  top: 90%;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+
+.map-control {
+  font-family: 'Roboto','sans-serif';
+  margin: 10px;
+}
+
+.selector-control {
+  font-size: 14px;
+  line-height: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.search {
+  z-index: 1;
+  position: fixed;
+  top: 5px;
+  left: 5px;
+}
+
+.search-field {
+  width: 320px;
+  padding: 5px;
+}
+
+ul {
+  background: white;
+  border: 1px solid darkgrey;
+  overflow: auto;
+  padding: 0px;
+  margin: 0;
+  max-height: 200px;
+  overflow: auto;
+}
+
+.box {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.box:hover {
+  background-color: #269abc;
+  color: white;
+}
+
+.button {
+  text-align: center;
+  padding: 5px;
+  background-color: white;
+  border: 1px darkgrey solid;
+  cursor: pointer;
+  width: 334px;
+}
+
+#pano {
+  height: 150px;
+  width: 400px;
+}
+
+.name {
+  font-size: 14px;
+  font-family: sans-serif;
+  text-align: center;
+  text-shadow: 0 0 20px blueviolet;
+}
