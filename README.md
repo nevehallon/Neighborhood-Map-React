@@ -17,9 +17,9 @@ A new browser window open automatically displaying the app.  If it doesn't, navi
 
 ## How to run the project in Production Mode
 
-1. Build the production ready optimised code. `npm run build`
+1. Build the production ready optimized code. `npm run build`
 2. Deploy it to `gh-pages` branch by `npm run deploy`
-3. Check the online demo [here]()
+3. Check the online demo [here](https://nevehallon.github.io/Neighborhood-Map-React/)
 
 ## How to use
 
