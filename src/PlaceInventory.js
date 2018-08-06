@@ -64,7 +64,7 @@ class PlaceInventory extends Component {
                 <ul className={ this.state.condition ? "button-toggled" : "b" }>
                     {this.state.suggestions && PlaceInventory}
                 </ul>
-                <button className="button" onClick={(e) => this.handleClick(e)} className={ this.state.condition ? "placement-toggled button" : "b button" }>Show/Hide Suggestions</button>
+                <button onClick={(e) => this.handleClick(e)} className={ this.state.condition ? "placement-toggled button" : "b button" }>click me!</button>
             </div>
         );
     }

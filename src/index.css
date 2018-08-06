@@ -14,12 +14,12 @@ body {
   display: grid;
   z-index: -1;
   height: 100vh;
+  width: 100%;
+  grid-gap: 10px;
+  grid-template-rows: 1px 175px;
 }
 
 #style-selector-control { 
-  position: absolute;
-  left: 0;
-  top: 90%;
   width: 100%;
   text-align: center;
   font-size: 18px;
@@ -38,18 +38,18 @@ body {
 }
 
 .search {
-  width: 100%;
+  justify-self: center;
   z-index: 2;
   width: 380px;
   display: grid !important;
-  grid-gap: 10px;
-  grid-auto-columns: auto;
-  place-self: center;
+  grid-gap: 20px;
+  grid-auto-rows: 22px 100px 22px;
 }
 
 .search-field {
   width: 366px;
   padding: 5px;
+  height: 22px;
 }
 
 ul::-webkit-scrollbar {
@@ -68,6 +68,7 @@ outline: 1px solid slategrey;
 }
 
 ul {
+  height: 112px;
   display: grid;
   border-radius: 20px;
   background: darkgrey;
@@ -75,7 +76,6 @@ ul {
   overflow: auto;
   padding: 0px;
   margin: 0;
-  max-height: 200px;
 }
 
 .box {
@@ -84,7 +84,7 @@ ul {
 }
 
 .box:hover {
-  background-color: #269abc;
+  background-color: darkgoldenrod;
   color: white;
 }
 
@@ -96,6 +96,7 @@ ul {
   border: 1px darkgrey solid;
   cursor: pointer;
   width: 380px;
+  height: 42px;
 }
 
 #pano {
@@ -111,15 +112,11 @@ ul {
 }
 
 #map {
-  top: -280px !important;
   height: 100vh;
+  display: grid;
 }
 
 .button-toggled {
   visibility: hidden;
   display: none;
 } 
-
-.placement-toggled {
-  margin-bottom: 212px;
-}

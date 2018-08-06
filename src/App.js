@@ -586,14 +586,14 @@ class App extends Component {
     render() {
         return (
           <div id="main-content">
-            <PlaceInventory key="100" allplaces={this.state.allplaces} openInfoWindow={this.openInfoWindow}
-                              closeInfoWindow={this.closeInfoWindow}/>
             <div id="map"></div>
+            
+            <PlaceInventory key="100" allplaces={this.state.allplaces} openInfoWindow={this.openInfoWindow} closeInfoWindow={this.closeInfoWindow}/>
               <div id="style-selector-control"  className="map-control">
               <select id="style-selector" className="selector-control">
+                <option value="night">Night mode</option>
                 <option value="default">Default</option>
                 <option value="silver">Silver</option>
-                <option value="night">Night mode</option>
                 <option value="retro">Retro</option>
                 <option value="hiding">Hide features</option>
               </select>
