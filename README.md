@@ -1,5 +1,5 @@
 # Neighborhood-Map-React
-A single-page web application, built using the React framework, that displays a Google Map of an area and various points of interest. Users can search all included landmarks and, when selected, additional information about a landmark is presented from the FourSquare APIs.
+A single-page web application, built using the React framework, that displays a Google Map with various points/markers. One can search all included landmarks and, when selected, more information about a landmark is shown from the FourSquare APIs.
 
 ## How to run the project in Development Mode
 The project uses [Node.js >= 6.x](https://nodejs.org/en/) and the [Create-React-App starter code](https://github.com/facebookincubator/create-react-app).
@@ -26,3 +26,14 @@ A new browser window open automatically displaying the app.  If it doesn't, navi
 1. Type into the search box to filter locations on the map.
 2. Click on the button below the search box to toggle results list.
 4. Click on any marker to see details fetched from [FourSquare APIs](https://developer.foursquare.com/) in its info-window.
+
+## dependencies
+
+**This site was built using:**
+
+- React
+- FourSquare API
+- Google maps API
+- CSS
+- JavaScript
+- :coffee: & :headphones:
