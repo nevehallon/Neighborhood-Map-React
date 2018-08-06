@@ -104,7 +104,7 @@ class App extends Component {
         let self = this;
 
         let view = document.getElementById('map');
-        view.style.height = window.innerHeight + "px";
+       /*  view.style.height = window.innerHeight + "px"; */
 
         let map = new window.google.maps.Map(view, {
             center: {lat: 31.7875024, lng: 35.1972497},
@@ -491,7 +491,7 @@ class App extends Component {
         });
         this.state.infowindow.setContent('Loading Data...');
         this.state.map.setCenter(marker.getPosition());
-        this.state.map.panBy(0, -200);
+        this.state.map.panBy(0, -400);
         this.getMarkerInfo(marker, place);
         // Open the infowindow on the correct marker.
         this.state.infowindow.open(this.state.map, marker);
@@ -517,7 +517,7 @@ class App extends Component {
                     response.json().then(function (data) {
                         let place_data = data.response.venues[0];
                         let verified = '<b>Verified place: </b>' + (place_data.verified ? 'Yes' : 'No') + '<br>';
-                        let checkinsCount = '<b>Number of CheckIn: </b>' + place_data.stats.checkinsCount + '<br>';
+                        let checkinsCount = '<b>Number of CheckIns: </b>' + place_data.stats.checkinsCount + '<br>';
                         let usersCount = '<b>Number of Users: </b>' + place_data.stats.usersCount + '<br>';
                         let tipCount = '<b>Number of Tips: </b>' + place_data.stats.tipCount + '<br>';
                         let readMore = '<a href="https://foursquare.com/v/'+ place_data.id +'" target="_blank">Read More on Foursquare Website</a>'
@@ -527,7 +527,6 @@ class App extends Component {
                         // In case the status is OK, which means the pano was found, compute the
                         // panorama from that and set the options
                         function getStreetView(data, status) {
-                          console.log(marker);
                           
                           if (status === window.google.maps.StreetViewStatus.OK) {
                             let nearStreetViewLocation = data.location.latLng;
@@ -543,7 +542,7 @@ class App extends Component {
                                 position: nearStreetViewLocation,
                                 pov: {
                                   heading: heading,
-                                  pitch: 30
+                                  pitch: 0
                                 }
                               };
                             let pano = document.getElementById('pano');  

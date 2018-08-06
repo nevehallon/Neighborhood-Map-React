@@ -1,10 +1,22 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
 
-#style-selector-control{
+#main-content {
+  display: grid;
+  z-index: -1;
+  height: 100vh;
+}
+
+#style-selector-control { 
   position: absolute;
   left: 0;
   top: 90%;
@@ -24,26 +36,46 @@ body {
   padding-left: 5px;
   padding-right: 5px;
 }
+
 .search {
-  z-index: 1;
-  position: fixed;
-  top: 5px;
-  left: 5px;
+  width: 100%;
+  z-index: 2;
+  width: 380px;
+  display: grid !important;
+  grid-gap: 10px;
+  grid-auto-columns: auto;
+  place-self: center;
 }
 
 .search-field {
-  width: 320px;
+  width: 366px;
   padding: 5px;
 }
 
+ul::-webkit-scrollbar {
+  width: 1em;
+}
+
+ul::-webkit-scrollbar-track {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+ul::-webkit-scrollbar-thumb {
+  border-radius: 22px;
+background-color: black;
+outline: 1px solid slategrey;
+}
+
 ul {
-  background: white;
+  display: grid;
+  border-radius: 20px;
+  background: darkgrey;
   border: 1px solid darkgrey;
   overflow: auto;
   padding: 0px;
   margin: 0;
   max-height: 200px;
-  overflow: auto;
 }
 
 .box {
@@ -56,18 +88,19 @@ ul {
   color: white;
 }
 
-.button {
+.button {  
+  border-radius: 20px;
+  background: white;
   text-align: center;
   padding: 5px;
-  background-color: white;
   border: 1px darkgrey solid;
   cursor: pointer;
-  width: 334px;
+  width: 380px;
 }
 
 #pano {
   height: 150px;
-  width: 400px;
+  width: 340px;
 }
 
 .name {
@@ -75,4 +108,18 @@ ul {
   font-family: sans-serif;
   text-align: center;
   text-shadow: 0 0 20px blueviolet;
+}
+
+#map {
+  top: -280px !important;
+  height: 100vh;
+}
+
+.button-toggled {
+  visibility: hidden;
+  display: none;
+} 
+
+.placement-toggled {
+  margin-bottom: 212px;
 }

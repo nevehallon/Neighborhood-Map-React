@@ -3,17 +3,16 @@ import PlaceMark from './PlaceMark';
 
 class PlaceInventory extends Component {
     //Constructor
-    
     constructor(props) {
         super(props);
         this.state = {
             'places': '',
             'query': '',
             'suggestions': true,
+            'condition': false
         };
 
         this.filterLocations = this.filterLocations.bind(this);
-        this.toggleSuggestions = this.toggleSuggestions.bind(this);
     }
 
     // Filter Places based on user query
@@ -43,12 +42,11 @@ class PlaceInventory extends Component {
         });
     }
 
-   // Show and hide suggestions
-    
-    toggleSuggestions() {
+   // Show and hide suggestions    
+    handleClick() {
         this.setState({
-            'suggestions': !this.state.suggestions
-        });
+            'condition': !this.state.condition
+          });
     }
 
     // Render function of PlaceInventory
@@ -62,12 +60,11 @@ class PlaceInventory extends Component {
 
         return (
             <div className="search">
-                <input role="search" aria-labelledby="filter" id="search-field" className="search-field" type="text" placeholder="Filter"
-                       value={this.state.query} onChange={this.filterLocations}/>
-                <ul>
+                <input role="search" aria-labelledby="filter" id="search-field" className="search-field" type="text" placeholder="Filter" value={this.state.query} onChange={this.filterLocations}/>
+                <ul className={ this.state.condition ? "button-toggled" : "b" }>
                     {this.state.suggestions && PlaceInventory}
                 </ul>
-                <button className="button" onClick={this.toggleSuggestions}>Show/Hide Suggestions</button>
+                <button className="button" onClick={(e) => this.handleClick(e)} className={ this.state.condition ? "placement-toggled button" : "b button" }>Show/Hide Suggestions</button>
             </div>
         );
     }
