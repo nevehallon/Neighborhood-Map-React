@@ -615,7 +615,11 @@ function loadMapJS(src) {
     script.src = src;
     script.async = true;
     script.onerror = function () {
-        document.write("Google Maps can't be loaded");
-    };
+       alert("Google Map authorization error. Please try refreshing the page.");
+    }
     ref.parentNode.insertBefore(script, ref);
+}
+
+window.gm_authFailure = function() {
+  alert("google Map authorization error. Please try refreshing the page.");
 }
